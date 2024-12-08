@@ -15,7 +15,6 @@ import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 
-import static com.codeborne.selenide.Browsers.CHROME;
 import static com.codeborne.selenide.Selenide.closeWebDriver;
 import static com.codeborne.selenide.Selenide.open;
 
@@ -26,16 +25,13 @@ public class TestBase {
     public void methodSetUp() {
 
         String browser = System.getProperty("browser", "chrome");
-//        Platform platform = Platform.valueOf(System.getProperty("os", "WINDOWS"));
 
-//        DesiredCapabilities caps = new DesiredCapabilities();
-//        caps.setBrowserName(CHROME);
-//
-//        caps.setPlatform(platform);
-//
-//        Configuration.remote = "http://192.168.100.29:4444/wd/hub";
-//        Configuration.browserCapabilities = caps;
+        DesiredCapabilities caps = new DesiredCapabilities();
+        caps.setBrowserName(browser);
+        caps.setPlatform(Platform.WINDOWS);
 
+        Configuration.remote = "http://192.168.100.29:4444/wd/hub";
+        Configuration.browserCapabilities = caps;
         Configuration.browser = browser;
         Configuration.pageLoadTimeout = 5000;
 
@@ -56,4 +52,6 @@ public class TestBase {
 
         closeWebDriver();
     }
+
 }
+

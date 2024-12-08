@@ -10,7 +10,7 @@ import static org.testng.AssertJUnit.assertEquals;
 @Feature("Login")
 public class LoginTest extends TestBase {
 
-    @Description("This test attempts to login with correct email and password")
+    @Description("User attempts to login with correct email and password")
     @Test(description = "Login with correct credentials")
     public void loginWithCorrectCredentials() {
 
@@ -19,7 +19,7 @@ public class LoginTest extends TestBase {
 
     }
 
-    @Description("This test attempts to login with wrong email and correct password and verifies error message")
+    @Description("User attempts to login with wrong email and correct password and verifies error message")
     @Test(description = "Login with wrong email and correct password")
     public void loginWithWrongEmailAndCorrectPassword() {
 
@@ -29,7 +29,7 @@ public class LoginTest extends TestBase {
 
     }
 
-    @Description("This test attempts to login with correct email and incorrect password and verifies error message")
+    @Description("User attempts to login with correct email and incorrect password and verifies error message")
     @Test(description = "Login with correct email and incorrect password")
     public void loginWithCorrectEmailAndWrongPassword() {
 
