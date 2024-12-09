@@ -24,7 +24,7 @@ public class TestBase {
     @BeforeMethod
     public void methodSetUp() {
 
-        String browser = System.getProperty("browser", "edge");
+        String browser = System.getProperty("browser", "MicrosoftEdge");
 
         DesiredCapabilities caps = new DesiredCapabilities();
         caps.setBrowserName(browser);
