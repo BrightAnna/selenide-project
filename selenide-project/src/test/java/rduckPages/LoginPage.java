@@ -1,3 +1,5 @@
+package rduckPages;
+
 import org.openqa.selenium.By;
 
 import static com.codeborne.selenide.Condition.*;
@@ -24,19 +26,19 @@ public class LoginPage {
         $(loginButton).click();
     }
 
-    //    @Step("Login with defined credentials")
+    @Step("Login with defined credentials")
     public static void loginWithCredentials(String email, String password) {
         typeEmail(email);
         typePassword(password);
         clickButton();
     }
 
-    //    @Step("Validate that the error message is displayed")
+    @Step("Validate that the error message is displayed")
     public static void validateMessageIsDisplayed() {
         $(errorMassageText).shouldBe(visible);
     }
 
-    //    @Step("Validate that the error message text matches expectation")
+    @Step("Validate that the error message text matches expectation")
     public static void validateErrorMessageText(String expectedText) {
         $(errorMassageText).shouldHave(text(expectedText));
     }

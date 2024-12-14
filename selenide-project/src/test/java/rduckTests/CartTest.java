@@ -1,7 +1,12 @@
+package rduckTests;
+
 import io.qameta.allure.Description;
 import io.qameta.allure.Epic;
 import io.qameta.allure.Feature;
 import org.testng.annotations.Test;
+import rduckPages.CartPage;
+import rduckPages.HomePage;
+import rduckPages.RedDuckPage;
 
 @Epic("Cart functionality implementation")
 @Feature("Cart")

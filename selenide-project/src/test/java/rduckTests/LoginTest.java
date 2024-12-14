@@ -1,7 +1,10 @@
+package rduckTests;
+
 import io.qameta.allure.Description;
 import io.qameta.allure.Epic;
 import io.qameta.allure.Feature;
 import org.testng.annotations.Test;
+import rduckPages.LoginPage;
 
 import static com.codeborne.selenide.Selenide.title;
 import static org.testng.AssertJUnit.assertEquals;
