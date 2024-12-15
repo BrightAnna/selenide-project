@@ -33,7 +33,7 @@ public class TestBase {
         Configuration.remote = "http://192.168.100.29:4444/wd/hub";
         Configuration.browserCapabilities = caps;
         Configuration.browser = browser;
-        Configuration.pageLoadTimeout = 5000;
+        Configuration.pageLoadTimeout = 10000;
 
         open("https://litecart.stqa.ru/en/");
 
